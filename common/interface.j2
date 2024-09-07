@@ -1,11 +1,11 @@
 interface {{ interface.name }}
-  {{ interface.cf.security_level }}
+  {% if interface.description %}
+  description {{ interface.description }}
+  {% endif %}
   {% if interface.label %}
   nameif {{ interface.label }}
   {% endif %}
-  {% if interface.custom_fields.security_level %}
-  security-level {{ interface.custom_fields.security_level }}
-  {% endif %}
+  security-level {{ interface.cf.security_level }}
   {% if interface.enabled %}
   no shut
   {% else %}
