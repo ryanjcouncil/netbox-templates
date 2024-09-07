@@ -8,9 +8,9 @@ banner motd    High Availability         {{ device.ha | default('False') }}
 banner motd +----------------------------------------------------------+
 banner motd    Building                  {{ device.cf.building | default('Unknown') }}
 banner motd +----------------------------------------------------------+
-banner motd    Floor                     {{ device.cf.floor default('Unknown') }}
+banner motd    Floor                     {{ device.cf.floor | default('Unknown') }}
 banner motd +----------------------------------------------------------+
-banner motd    Room                      {{ device.cf.room default('Unknown') }}
+banner motd    Room                      {{ device.cf.room | default('Unknown') }}
 banner motd +----------------------------------------------------------+
 banner motd 
 banner motd
