@@ -1,7 +1,7 @@
 {% extends 'base.j2' %}
 
 {% block content %}
-  {% for interface in device.interfaces.all() %}
+  {% for interface in device.interfaces.all() -%}
     {% include 'common/interface.j2' %}
   {% endfor %}
 {% endblock %}
