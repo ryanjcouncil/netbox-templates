@@ -8,6 +8,9 @@ interface {{ interface.name }}
   {% if interface.cf.security_level is not none %}
   security-level {{ interface.cf.security_level }}
   {% endif %}
+  {% for ip in interface.ip_addresses.all() %}
+    address {{ ip }}
+  {% endfor %}
   {% if interface.enabled %}
   no shut
   {% else %}
