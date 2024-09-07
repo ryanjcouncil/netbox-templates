@@ -1,9 +1,9 @@
 interface {{ interface.name }}
   {% if interface.label %}
-    nameif {{ interface.label }}
+  nameif {{ interface.label }}
   {% endif %}
-  {% if device.cf.security_level %}
-    security-level {{ device.cf.security_level }}
+  {% if interface.cf.security_level %}
+  security-level {{ interface.cf.security_level }}
   {% endif %}
   no shut
 !
