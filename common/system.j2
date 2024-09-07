@@ -1,6 +1,6 @@
 hostname {{ device.name }}
 domain-name {{ dns.domain }}
-enable password {{ admin_password }}
+enable password {{ admin_password | default('PASSWORD') }}
 ftp mode passive
 {% if dns.servers %}
 dns domain-lookup inside
