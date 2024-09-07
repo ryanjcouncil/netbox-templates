@@ -4,7 +4,7 @@ banner motd               {{ device.name}}.{{ dns.domain }}
 banner motd +----------------------------------------------------------+
 banner motd    Hardware Model            {{ device.device_type }}
 banner motd +----------------------------------------------------------+
-banner motd    High Availability         {{ device.ha }}
+banner motd    High Availability         {{ device.ha | default('False') }}
 banner motd +----------------------------------------------------------+
 banner motd    Building                  {{ device.cf.building }}
 banner motd +----------------------------------------------------------+
