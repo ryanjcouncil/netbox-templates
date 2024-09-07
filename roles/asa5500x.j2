@@ -2,6 +2,6 @@
 
 {% block content %}
   {% for interface in device.interfaces.all() -%}
-    {% include 'common/interface.j2' %}
+    {% include 'common/interface.j2' -%}
   {% endfor %}
 {% endblock %}
