@@ -9,7 +9,7 @@ interface {{ interface.name }}
   security-level {{ interface.cf.security_level }}
   {% endif %}
   {% for ip_address in interface.ip_addresses.all() %}
-  address {{ ip_address.ip }}
+  address {{ ip_address.address.ip }} {{ ip_address.address.netmask }}
   {% endfor %}
   {% if interface.enabled %}
   no shut
