@@ -3,6 +3,6 @@ interface {{ interface.name }}
     address {{ ip }}
   {% endfor %}
   {% if interface.label %}nameif {{ interface.label }}{% endif %}
-  {% if device.custom_fields.security_level }}security-level {{ device.custom_fields.security_level }}{% endif %}
+  {% if device.custom_fields.security_level %}security-level {{ device.custom_fields.security_level }}{% endif %}
   no shut
 !
