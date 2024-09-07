@@ -1,9 +1,19 @@
 interface {{ interface.name }}
-  {% if interface.description %}description {{ interface.description }}{% endif %}
-  {% if interface.label %}nameif {{ interface.label }}{% endif %}
-  {% if interface.cf.security_level is not none %}security-level {{ interface.cf.security_level }}{% endif %}
+  {% if interface.description %}
+  description {{ interface.description }}
+  {% endif %}
+  {% if interface.label %}
+  nameif {{ interface.label }}
+  {% endif %}
+  {% if interface.cf.security_level is not none %}
+  security-level {{ interface.cf.security_level }}
+  {% endif %}
   {% for ip_address in interface.ip_addresses.all() %}
   ip address {{ ip_address.address.ip }} {{ ip_address.address.netmask }}
   {% endfor %}
-  {% if interface.enabled %}no shut{% else %}shut{% endif %}
+  {% if interface.enabled %}
+  no shut
+  {% else %}
+  shut
+  {% endif %}
 !
