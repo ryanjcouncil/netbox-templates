@@ -1,5 +1,5 @@
 hostname {{ device.name }}
-domain-name {{ dns.domain }}
+domain-name {{ device.dns.domain }}
 enable password {{ admin_password }}
 ftp mode passive
 {% if device.dns.servers %}
