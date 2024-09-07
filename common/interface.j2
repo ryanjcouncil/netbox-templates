@@ -1,8 +1,8 @@
 interface {{ interface.name }}
-  {% for ip in interface.ip_addresses.all() %}
+  {% for ip in interface.ip_addresses.all() -%}
     address {{ ip }}
   {% endfor %}
-  {% if interface.label %}nameif {{ interface.label }}{% endif %}
-  {% if device.custom_fields.security_level %}security-level {{ device.custom_fields.security_level }}{% endif %}
+  {% if interface.label -%}nameif {{ interface.label }}{% endif %}
+  {% if device.cf.security_level -%}security-level {{ device.cf.security_level }}{% endif %}
   no shut
 !
