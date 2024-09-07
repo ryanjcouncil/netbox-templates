@@ -5,7 +5,9 @@ interface {{ interface.name }}
   {% if interface.label %}
   nameif {{ interface.label }}
   {% endif %}
+  {% if interface.cf.security_level is not none %}
   security-level {{ interface.cf.security_level }}
+  {% endif %}
   {% if interface.enabled %}
   no shut
   {% else %}
