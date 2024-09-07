@@ -1,4 +1,7 @@
 interface {{ interface.name }}
+  {{ interface.cf.security_level }}
+  {{ interface.custom_field.security_level }}
+  {{ interface.custom_fields.security_level }}
   {% if interface.label %}
   nameif {{ interface.label }}
   {% endif %}
