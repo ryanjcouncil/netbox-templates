@@ -1,9 +1,0 @@
-{% if whitelist.management %}
-{% for key, value in whitelist.management.items() %}
-{% for address in value %}
-ssh {{ address.zone }} {{ address.network }} {{ address.netmask }}
-{% endfor %}
-{% endfor %}
-!
-
-{% endif %}
