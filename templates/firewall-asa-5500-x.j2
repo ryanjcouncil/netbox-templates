@@ -1,0 +1,9 @@
+{% extends 'base.j2' %}
+
+{% block content %}
+  {% include 'common/asa/system.j2' %}
+  {% for interface in device.interfaces.all() %}
+    {% include 'common/interface.j2' %}
+  {% endfor %}
+  {% include 'common/asa/banner.j2' %}
+{% endblock %}

@@ -1,0 +1,4 @@
+{% for route in routes %}
+route {{ route.zone }} {{ route.network }} {{ route.netmask }} {{ route.next-hop }} {{ route.distance }}
+{% endfor %}
+!
