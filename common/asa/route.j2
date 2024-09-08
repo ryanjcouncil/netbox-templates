@@ -1,6 +1,6 @@
 {% if routes %}
 {% for route in routes %}
-route {{ route.zone }} {{ route.network }} {{ route.netmask }} {{ route.next-hop }} {{ route.distance }}
+route {{ route.zone }} {{ route.network }} {{ route.netmask }} {{ route.next_hop }} {{ route.distance }}
 {% endfor %}
 !
 {% endif %}
