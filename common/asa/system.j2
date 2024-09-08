@@ -1,7 +1,10 @@
 hostname {{ device.name }}
 domain-name {{ dns.domain }}
+!
 enable password {{ admin_password | default('PASSWORD') }}
+!
 ftp mode passive
+!
 {% if dns.servers %}
 dns domain-lookup inside
 dns server-group DefaultDNS
@@ -9,5 +12,6 @@ dns server-group DefaultDNS
   name-server {{ server }}
   {% endfor %}
 {% endif %}
+!
 same-security-traffic permit inter-interface
 !
