@@ -5,6 +5,15 @@ interface {{ interface.name }}
   {% if interface.description %}
   description {{ interface.description }}
   {% endif %}
+  {% if interface.mtu %}
+  mtu {{ interface.mtu }}
+  {% endif %}
+  {% if interface.speed %}
+  speed {{ interface.speed }}
+  {% endif interface.speed %}
+  {% if interface.duplex %}
+  duplex {{ interface.duplex }}
+  {% endif %}
   {% if interface.enabled %}
   no shut
   {% else %}
