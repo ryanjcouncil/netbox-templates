@@ -1,0 +1,8 @@
+{% if whitelist.management %}
+{% for key, value in whitelist.management.iteritems() %}
+{% for address in value %}
+ssh {{ address.zone }} {{ address.network }} {{ address.netmask }}
+{% endfor %}
+{% endfor %}
+{% endif %}
+!
