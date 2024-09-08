@@ -5,7 +5,7 @@
   {% for interface in device.interfaces.filter(type='virtual') %}
     {% include 'platforms/asa-5500/virtual-interface.j2' %}
   {% endfor %}
-  {% for interface in device.interfaces.filter(type__n='virtual') %}
+  {% for interface in device.interfaces.filter(~Q(type='virtual')) %}
     {% include 'platforms/asa-5500/physical-interface.j2' %}
   {% endfor %}
   {% include 'common/asa/route.j2 '%}
