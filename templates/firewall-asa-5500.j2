@@ -8,6 +8,5 @@
   {% for interface in device.interfaces.all().exclude(type='virtual') %}
     {% include 'platforms/asa-5500/physical-interface.j2' %}
   {% endfor %}
-  {% include 'common/asa/route.j2 '%}
   {% include 'common/asa/banner.j2' %}
 {% endblock %}
