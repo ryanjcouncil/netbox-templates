@@ -1,6 +1,6 @@
 interface {{ interface.name }}
   {% if interface.untagged_vlan %}
-  switchport mode access vlan {{ interface.untagged_vlan.vid }}
+  switchport access vlan {{ interface.untagged_vlan.vid }}
   {% endif %}
   {% if interface.description %}
   description {{ interface.description }}
